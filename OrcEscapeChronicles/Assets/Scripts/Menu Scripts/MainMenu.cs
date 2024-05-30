@@ -6,6 +6,7 @@ using Unity.Netcode;
 using System;
 using JetBrains.Annotations;
 using System.Threading;
+using UnityEngine.UI;
 using Unity.Netcode.Transports.UTP;
 public class MainMenu : MonoBehaviour
 {
@@ -37,8 +38,15 @@ public class MainMenu : MonoBehaviour
         }
 
     }
-    public void Inputfield(string ip)
+    public void Inputfield()
     {
-         NetworkManager.Singleton.GetComponent<UnityTransport>().SetConnectionData(ip, (ushort)7777);
+        var input = gameObject.GetComponent<InputField>();
+        var se= new InputField.SubmitEvent();
+        se.AddListener(SubmitIP);
+        NetworkManager.Singleton.GetComponent<UnityTransport>().SetConnectionData(input.onEndEdit.ToString(), (ushort)7777);
+    }
+      private void SubmitIP(string arg0)
+    {
+        Debug.Log(arg0);
     }
 }
