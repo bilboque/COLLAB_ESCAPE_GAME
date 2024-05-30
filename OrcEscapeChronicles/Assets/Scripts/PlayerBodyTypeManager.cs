@@ -11,6 +11,7 @@ public class PlayerBodyTypeManager : NetworkBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        DontDestroyOnLoad(gameObject);
     }
 
     public override void OnNetworkSpawn()
@@ -20,13 +21,13 @@ public class PlayerBodyTypeManager : NetworkBehaviour
         cameraController camera = cameraObject.GetComponent<cameraController>();
         
         var transform = GetComponent<Transform>();
-        camera.AddTarget(transform);
         
         // Ensure this runs only on the owner client
         if (IsOwner)
         {
             // Set the Rigidbody2D body type to Dynamic
             SetBodyTypeToDynamic();
+            camera.AddTarget(transform);
         }
     }
 

@@ -25,6 +25,7 @@ public class cameraController : MonoBehaviour
     private void Awake()
     {
         _mainCamera = Camera.main;
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Start()
