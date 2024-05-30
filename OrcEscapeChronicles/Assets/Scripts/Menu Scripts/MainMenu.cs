@@ -40,12 +40,15 @@ public class MainMenu : MonoBehaviour
     }
     public void Inputfield()
     {
-        var input = gameObject.GetComponent<InputField>();
-        var se= new InputField.SubmitEvent();
-        se.AddListener(SubmitIP);
-        NetworkManager.Singleton.GetComponent<UnityTransport>().SetConnectionData(input.onEndEdit.ToString(), (ushort)7777);
+        var canvas = GameObject.Find("InputField");
+        var input = canvas.GetComponent<InputField>();
+        if(!input){
+            Debug.LogError("InputField not found");
+            return;}
+        NetworkManager.Singleton.GetComponent<UnityTransport>().SetConnectionData(input.text, (ushort)7777);
+
     }
-      private void SubmitIP(string arg0)
+      public void SubmitIP(string arg0)
     {
         Debug.Log(arg0);
     }
