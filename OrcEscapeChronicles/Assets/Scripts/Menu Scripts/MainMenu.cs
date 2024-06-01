@@ -3,11 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Unity.Netcode;
-using System;
-using JetBrains.Annotations;
-using System.Threading;
-using UnityEngine.UI;
-using Unity.Netcode.Transports.UTP;
+using Unity.Netcode.Transports.UTP; // doc de merde
+using TMPro;
 public class MainMenu : MonoBehaviour
 {
     public string ip = "127.0.0.1";
@@ -39,8 +36,32 @@ public class MainMenu : MonoBehaviour
         }
 
     }
-    public void IpAdressChanged(string newIpAdress)
+
+    // Tout les elements de la scene sont des Object qu'on peut trouver avec GameObject.Find.
+    // Ensuite il faut acceder au composant du game object
+    public void Inputfield()
     {
-        this.ip = newIpAdress;
+        var input = GameObject.Find("InputField");
+        if (!input)
+        {
+            Debug.LogError("InputField not found");
+            return;
+        }
+        string ipAddr = input.GetComponent<TMP_InputField>().text;
+        // log_input_text(text);
+
+        NetworkManager.Singleton.GetComponent<UnityTransport>().SetConnectionData(
+            ipAddr,  // The IP address is a string
+            (ushort)7777 // The port number is an unsigned short
+        );
+    }
+    public void SubmitIP(string arg0)
+    {
+        Debug.Log(arg0);
+    }
+
+    void log_input_text(string text)
+    {
+        Debug.Log(text);
     }
 }
