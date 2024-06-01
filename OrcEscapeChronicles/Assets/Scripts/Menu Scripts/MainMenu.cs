@@ -10,7 +10,7 @@ using UnityEngine.UI;
 using Unity.Netcode.Transports.UTP;
 public class MainMenu : MonoBehaviour
 {
-
+    public string ip = "127.0.0.1";
     public void PlayHost()
     {   
         SceneManager.LoadScene(1);
@@ -27,6 +27,7 @@ public class MainMenu : MonoBehaviour
     }
     public void PlayClient()
     {
+        NetworkManager.Singleton.GetComponent<UnityTransport>().SetConnectionData(ip,(ushort)7777);
         SceneManager.LoadScene(1);
         if (NetworkManager.Singleton != null)
         {
@@ -38,18 +39,8 @@ public class MainMenu : MonoBehaviour
         }
 
     }
-    public void Inputfield()
+    public void IpAdressChanged(string newIpAdress)
     {
-        var canvas = GameObject.Find("InputField");
-        var input = canvas.GetComponent<InputField>();
-        if(!input){
-            Debug.LogError("InputField not found");
-            return;}
-        NetworkManager.Singleton.GetComponent<UnityTransport>().SetConnectionData(input.text, (ushort)7777);
-
-    }
-      public void SubmitIP(string arg0)
-    {
-        Debug.Log(arg0);
+        this.ip = newIpAdress;
     }
 }
