@@ -4244,7 +4244,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &188764857
 Transform:
   m_ObjectHideFlags: 0
@@ -5602,7 +5602,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &299749051
 Transform:
   m_ObjectHideFlags: 0
@@ -17783,6 +17783,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522620787513132903, guid: 8e9c401d7a70ec94d956296ea011f594,
+        type: 3}
+      propertyPath: level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522620787513132903, guid: 8e9c401d7a70ec94d956296ea011f594,
+        type: 3}
+      propertyPath: position.x
+      value: 12.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522620787513132903, guid: 8e9c401d7a70ec94d956296ea011f594,
+        type: 3}
+      propertyPath: position.y
+      value: -5.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522620787513132903, guid: 8e9c401d7a70ec94d956296ea011f594,
+        type: 3}
+      propertyPath: sortingLayerName
+      value: Layer 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
