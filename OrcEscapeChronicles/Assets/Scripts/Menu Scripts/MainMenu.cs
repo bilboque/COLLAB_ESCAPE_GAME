@@ -7,7 +7,6 @@ using Unity.Netcode.Transports.UTP; // doc de merde
 using TMPro;
 public class MainMenu : MonoBehaviour
 {
-    public string ip = "127.0.0.1";
     public void PlayHost()
     {   
         SceneManager.LoadScene(1);
@@ -24,7 +23,6 @@ public class MainMenu : MonoBehaviour
     }
     public void PlayClient()
     {
-        NetworkManager.Singleton.GetComponent<UnityTransport>().SetConnectionData(ip,(ushort)7777);
         SceneManager.LoadScene(1);
         if (NetworkManager.Singleton != null)
         {
@@ -48,7 +46,7 @@ public class MainMenu : MonoBehaviour
             return;
         }
         string ipAddr = input.GetComponent<TMP_InputField>().text;
-        // log_input_text(text);
+         log_input_text(ipAddr);
 
         NetworkManager.Singleton.GetComponent<UnityTransport>().SetConnectionData(
             ipAddr,  // The IP address is a string
