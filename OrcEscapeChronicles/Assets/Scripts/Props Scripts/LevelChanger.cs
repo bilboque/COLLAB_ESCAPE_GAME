@@ -2,6 +2,7 @@ using System.Collections;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Threading.Tasks;
 
 public class LevelChanger : NetworkBehaviour
 {
@@ -11,8 +12,8 @@ public class LevelChanger : NetworkBehaviour
 
     private GameObject player1;
     private GameObject player2;
-    private NetworkVariable<bool> player1Ready = new NetworkVariable<bool>(false);
-    private NetworkVariable<bool> player2Ready = new NetworkVariable<bool>(false);
+    private bool player1Ready = false;
+    private bool player2Ready = false;
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -21,24 +22,25 @@ public class LevelChanger : NetworkBehaviour
         {
             Debug.Log("player 1");
             player1 = other.gameObject;
-            player1Ready.Value = true;
+            player1Ready = true;
             player1.SetActive(false); // Deactivate player1
         }
         else if (other.CompareTag("Player"))
         {
             Debug.Log("player 2");
             player2 = other.gameObject;
-            player2Ready.Value = true;
+            player2Ready = true;
             player2.SetActive(false); // Deactivate player2
         }
-        if (player1Ready.Value && player2Ready.Value) {
+        if (player1Ready && player2Ready) {
             Debug.Log("ready");
             ChangeScene();
         }
     }
 
-    void ChangeScene()
+    async void ChangeScene()
     {
+        await Task.Delay(100);
         Debug.Log("change scene");
         if (true)
         {
