@@ -1,8 +1,9 @@
 using System.Collections;
+using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelChanger : MonoBehaviour
+public class LevelChanger : NetworkBehaviour
 {
     public int level;
     public string sortingLayerName;
@@ -43,12 +44,17 @@ public class LevelChanger : MonoBehaviour
 
         if (player1 != null)
         {
+            player1.layer = LayerMask.NameToLayer(sortingLayerName);
+            player1.GetComponent<SpriteRenderer>().sortingLayerName = sortingLayerName;
+
             player1.SetActive(true); // Reactivate player1
             player1.transform.position = position;
         }
 
         if (player2 != null)
         {
+            player2.layer = LayerMask.NameToLayer(sortingLayerName);
+            player2.GetComponent<SpriteRenderer>().sortingLayerName = sortingLayerName;
             player2.SetActive(true); // Reactivate player2
             player2.transform.position = position;
         }
