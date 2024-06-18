@@ -13,6 +13,5 @@ public class Door : Interactable
         isOpen = !isOpen;
         closedDoor.SetActive(!isOpen);
         openDoor.SetActive(isOpen);
-        Debug.Log("Door " + (isOpen ? "Opened" : "Closed"));
     }
 }

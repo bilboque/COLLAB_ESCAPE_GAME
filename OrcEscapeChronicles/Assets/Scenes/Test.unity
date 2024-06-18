@@ -4244,7 +4244,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &188764857
 Transform:
   m_ObjectHideFlags: 0
@@ -5602,7 +5602,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &299749051
 Transform:
   m_ObjectHideFlags: 0
@@ -17839,7 +17839,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 1
   sortingLayerName: Layer 2
-  position: {x: 12.27, y: -5.58}
+  position: {x: 7, y: -3}
 --- !u!1001 &1058427149
 PrefabInstance:
   m_ObjectHideFlags: 0
