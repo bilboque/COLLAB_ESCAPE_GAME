@@ -28,14 +28,16 @@ public class LevelChanger : NetworkBehaviour
             player2Ready = true;
             player2.SetActive(false); // Deactivate player2
         }
-        if (player1Ready && player2Ready)
+        if (player1Ready && player2Ready) {
+            Debug.Log("ready");
             ChangeScene();
+        }
     }
 
     void ChangeScene()
     {
         Debug.Log("change scene");
-        if (IsServer)
+        if (true)
         {
             SceneManager.sceneLoaded += OnSceneLoaded;
             SceneManager.LoadScene(level + 1);
@@ -45,6 +47,7 @@ public class LevelChanger : NetworkBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
+        Debug.Log("Loaded");
 
         if (player1 != null)
         {
