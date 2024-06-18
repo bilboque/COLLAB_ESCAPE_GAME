@@ -32,6 +32,7 @@ public class LevelChanger : NetworkBehaviour
             changeScene();
     }
 
+    [ServerRpc]
     void changeScene()
     {
         Debug.Log("change scene");
