@@ -34,6 +34,7 @@ public class LevelChanger : NetworkBehaviour
 
     void changeScene()
     {
+        Debug.Log("change scene");
         SceneManager.sceneLoaded += OnSceneLoaded;
         SceneManager.LoadScene(level + 1);
     }
