@@ -29,15 +29,17 @@ public class LevelChanger : NetworkBehaviour
             player2.SetActive(false); // Deactivate player2
         }
         if (player1Ready && player2Ready)
-            ChangeSceneServerRpc();
+            ChangeScene();
     }
 
-    [ServerRpc]
-    void ChangeSceneServerRpc()
+    void ChangeScene()
     {
         Debug.Log("change scene");
-        SceneManager.sceneLoaded += OnSceneLoaded;
-        SceneManager.LoadScene(level + 1);
+        if (IsServer)
+        {
+            SceneManager.sceneLoaded += OnSceneLoaded;
+            SceneManager.LoadScene(level + 1);
+        }
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
