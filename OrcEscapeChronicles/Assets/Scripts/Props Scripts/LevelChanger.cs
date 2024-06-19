@@ -72,8 +72,8 @@ public class LevelChanger : NetworkBehaviour
             player2.SetActive(true); // Reactivate player2
             player2.transform.position = position;
         }
-
-        if (IsServer) {
+        
+        if (NetworkManager.Singleton.IsHost) {
             foreach (GameObject obj in toSpawn)
             {
                 NetworkObject netObj = obj.GetComponent<NetworkObject>();

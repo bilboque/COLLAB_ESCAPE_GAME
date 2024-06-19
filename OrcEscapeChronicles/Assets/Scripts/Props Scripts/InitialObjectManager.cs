@@ -7,7 +7,7 @@ public class InitialObjectManager : NetworkBehaviour
 
     public override void OnNetworkSpawn()
     {
-        if (IsServer)
+        if (NetworkManager.Singleton.IsServer)
         {
             foreach (GameObject obj in initialObjects)
             {
