@@ -36,6 +36,7 @@ public class LevelChanger : NetworkBehaviour
         }
         if (player1Ready && player2Ready) {
             Debug.Log("ready");
+            SceneManager.sceneLoaded += OnSceneLoaded;
             ChangeScene();
         }
     }
