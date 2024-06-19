@@ -48,7 +48,7 @@ public class LevelChanger : NetworkBehaviour
             obj.Despawn(true);            
             SceneManager.sceneLoaded += OnSceneLoaded;
             SceneManager.LoadScene(level + 1);
-            ChangeSceneClientRpc(level +1);
+            this.ChangeSceneClientRpc(level +1);
         }
     }
 
