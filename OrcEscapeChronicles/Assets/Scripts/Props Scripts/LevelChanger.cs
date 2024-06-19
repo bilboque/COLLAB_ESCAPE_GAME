@@ -40,15 +40,11 @@ public class LevelChanger : NetworkBehaviour
         }
     }
 
-    async void ChangeScene()
+    void ChangeScene()
     {
-        await Task.Delay(100);
         Debug.Log("change scene");
-        if (NetworkManager.Singleton.IsServer)
-        {
-            SceneManager.sceneLoaded += OnSceneLoaded;
-            SceneManager.LoadScene(level + 1);
-        }
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.LoadScene(level + 1);
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
