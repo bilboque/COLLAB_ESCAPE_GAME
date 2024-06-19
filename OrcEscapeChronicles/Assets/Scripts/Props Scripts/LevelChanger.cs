@@ -33,7 +33,6 @@ public class LevelChanger : NetworkBehaviour
             Debug.Log("player 2");
             player2 = other.gameObject;
             player2Ready = true;
-            player2.SetActive(false); // Deactivate player2
         }
         if (player1Ready && player2Ready) {
             Debug.Log("ready");
