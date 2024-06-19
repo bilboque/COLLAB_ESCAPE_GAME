@@ -14,39 +14,52 @@ public class LevelChanger : NetworkBehaviour
 
     private GameObject player1;
     private GameObject player2;
-    private NetworkVariable<bool> player1Ready = new NetworkVariable<bool>(false);
-    private NetworkVariable<bool> player2Ready = new NetworkVariable<bool>(false);
+    private bool player1Ready = false;
+    private bool player2Ready = false;
 
-    [ServerRpc]
-    void OnTriggerEnter2DServerRpc(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("trigger");
         if (other.CompareTag("Player") && player1==null)
         {
             Debug.Log("player 1");
             player1 = other.gameObject;
-            player1Ready.Value = true;
+            player1Ready = true;
             player1.SetActive(false); // Deactivate player1
         }
         else if (other.CompareTag("Player"))
         {
             Debug.Log("player 2");
             player2 = other.gameObject;
-            player2Ready.Value = true;
+            player2Ready = true;
             player2.SetActive(false); // Deactivate player2
         }
-        if (player1Ready.Value && player2Ready.Value) {
+        if (player1Ready && player2Ready) {
             Debug.Log("ready");
-            ChangeSceneServerRpc();
+            ChangeScene();
         }
     }
 
-    [ServerRpc]
-    void ChangeSceneServerRpc()
+    void ChangeScene()
     {
-        Debug.Log("change scene");
-        SceneManager.sceneLoaded += OnSceneLoaded;
-        SceneManager.LoadScene(level + 1);
+        if (NetworkManager.Singleton.IsServer)
+        {
+            SceneManager.sceneLoaded += OnSceneLoaded;
+            SceneManager.LoadScene(level + 1);
+            ChangeSceneClientRpc(level +1);
+        }
+    }
+
+    [ClientRpc]
+    void ChangeSceneClientRpc(int sceneIndex)
+    {
+        if (!IsServer)
+        {
+            Debug.Log($"Client is changing scene to index {sceneIndex}");
+
+            // Load the scene on clients
+            SceneManager.LoadScene(sceneIndex);
+        }
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
