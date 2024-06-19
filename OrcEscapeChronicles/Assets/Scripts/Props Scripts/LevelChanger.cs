@@ -44,7 +44,7 @@ public class LevelChanger : NetworkBehaviour
     {
         await Task.Delay(100);
         Debug.Log("change scene");
-        if (true)
+        if (NetworkManager.Singleton.IsServer)
         {
             SceneManager.sceneLoaded += OnSceneLoaded;
             SceneManager.LoadScene(level + 1);
@@ -71,17 +71,6 @@ public class LevelChanger : NetworkBehaviour
             player2.GetComponent<SpriteRenderer>().sortingLayerName = sortingLayerName;
             player2.SetActive(true); // Reactivate player2
             player2.transform.position = position;
-        }
-        
-        if (NetworkManager.Singleton.IsHost) {
-            foreach (GameObject obj in toSpawn)
-            {
-                NetworkObject netObj = obj.GetComponent<NetworkObject>();
-                if (netObj != null && !netObj.IsSpawned) 
-                {
-                    netObj.Spawn();
-                }
-            }
         }
     }
 }
