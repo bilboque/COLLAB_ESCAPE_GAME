@@ -14,8 +14,8 @@ public class LevelChanger : NetworkBehaviour
 
     private GameObject player1;
     private GameObject player2;
-    private bool player1Ready = false;
-    private bool player2Ready = false;
+    private NetworkVariable<bool> player1Ready = new NetworkVariable<bool>(false);
+    private NetworkVariable<bool> player2Ready = new NetworkVariable<bool>(false);
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -24,17 +24,17 @@ public class LevelChanger : NetworkBehaviour
         {
             Debug.Log("player 1");
             player1 = other.gameObject;
-            player1Ready = true;
+            player1Ready.Value = true;
             player1.SetActive(false); // Deactivate player1
         }
         else if (other.CompareTag("Player"))
         {
             Debug.Log("player 2");
             player2 = other.gameObject;
-            player2Ready = true;
+            player2Ready.Value = true;
             player2.SetActive(false); // Deactivate player2
         }
-        if (player1Ready && player2Ready) {
+        if (player1Ready.Value && player2Ready.Value) {
             Debug.Log("ready");
             ChangeScene();
         }
