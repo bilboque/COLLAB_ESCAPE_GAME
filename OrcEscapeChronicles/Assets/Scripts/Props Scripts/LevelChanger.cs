@@ -45,7 +45,7 @@ public class LevelChanger : NetworkBehaviour
         if (NetworkManager.Singleton.IsServer)
         {
             obj.Despawn(true);
-            NetworkManager.SceneManager.LoadScene("level1", LoadSceneMode.Additive);
+            NetworkManager.SceneManager.LoadScene("niveau1", LoadSceneMode.Additive);
         }
     }
     
