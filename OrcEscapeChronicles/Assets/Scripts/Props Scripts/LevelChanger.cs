@@ -45,24 +45,12 @@ public class LevelChanger : NetworkBehaviour
     {
         if (NetworkManager.Singleton.IsServer)
         {
-            obj.Despawn(true);            
-            SceneManager.sceneLoaded += OnSceneLoaded;
-            SceneManager.LoadScene(level + 1);
-            this.ChangeSceneClientRpc(level +1);
+            obj.Despawn(true);
         }
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.LoadScene(level + 1);
     }
-
-    [ClientRpc]
-    void ChangeSceneClientRpc(int sceneIndex)
-    {
-        if (!IsServer)
-        {
-            Debug.Log($"Client is changing scene to index {sceneIndex}");
-
-            // Load the scene on clients
-            SceneManager.LoadScene(sceneIndex);
-        }
-    }
+    
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
