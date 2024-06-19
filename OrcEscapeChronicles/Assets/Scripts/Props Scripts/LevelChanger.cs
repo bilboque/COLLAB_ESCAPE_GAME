@@ -7,7 +7,7 @@ using System;
 
 public class LevelChanger : NetworkBehaviour
 {
-    public int level;
+    public string level;
     public string sortingLayerName;
     public Vector2 position;
 
@@ -46,7 +46,7 @@ public class LevelChanger : NetworkBehaviour
         if (NetworkManager.Singleton.IsServer)
         {
             obj.Despawn(true);
-            NetworkManager.SceneManager.LoadScene("niveau1", LoadSceneMode.Single);
+            NetworkManager.SceneManager.LoadScene(level, LoadSceneMode.Single);
         }
     }
     
