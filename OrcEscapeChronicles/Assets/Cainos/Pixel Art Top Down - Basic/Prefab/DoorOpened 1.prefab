@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 368845193
+  GlobalObjectIdHash: 902740183
   InScenePlacedSourceGlobalObjectIdHash: 506165564
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -124,6 +124,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7522620787513132903, guid: 8e9c401d7a70ec94d956296ea011f594,
         type: 3}
+      propertyPath: obj
+      value: 
+      objectReference: {fileID: 7643305066595675985}
+    - target: {fileID: 7522620787513132903, guid: 8e9c401d7a70ec94d956296ea011f594,
+        type: 3}
       propertyPath: level
       value: 1
       objectReference: {fileID: 0}
@@ -189,4 +194,4 @@ MonoBehaviour:
   level: 1
   sortingLayerName: Layer 2
   position: {x: 7, y: -3}
-  toSpawn: []
+  obj: {fileID: 0}

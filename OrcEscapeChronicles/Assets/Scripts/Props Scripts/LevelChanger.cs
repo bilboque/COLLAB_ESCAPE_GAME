@@ -10,7 +10,8 @@ public class LevelChanger : NetworkBehaviour
     public int level;
     public string sortingLayerName;
     public Vector2 position;
-    public GameObject[] toSpawn;
+
+    public NetworkObject obj;
 
     private GameObject player1;
     private GameObject player2;
@@ -44,6 +45,7 @@ public class LevelChanger : NetworkBehaviour
     {
         if (NetworkManager.Singleton.IsServer)
         {
+            obj.Despawn(true);            
             SceneManager.sceneLoaded += OnSceneLoaded;
             SceneManager.LoadScene(level + 1);
             ChangeSceneClientRpc(level +1);
