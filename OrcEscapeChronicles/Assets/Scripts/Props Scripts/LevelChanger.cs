@@ -11,8 +11,6 @@ public class LevelChanger : NetworkBehaviour
     public string sortingLayerName;
     public Vector2 position;
 
-    public NetworkObject obj;
-
     private GameObject player1;
     private GameObject player2;
     private bool player1Ready = false;
@@ -45,7 +43,6 @@ public class LevelChanger : NetworkBehaviour
     {
         if (NetworkManager.Singleton.IsServer)
         {
-            obj.Despawn(true);
             NetworkManager.SceneManager.LoadScene(level, LoadSceneMode.Single);
         }
     }
