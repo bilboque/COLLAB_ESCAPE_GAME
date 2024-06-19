@@ -3,12 +3,14 @@ using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Threading.Tasks;
+using System;
 
 public class LevelChanger : NetworkBehaviour
 {
     public int level;
     public string sortingLayerName;
     public Vector2 position;
+    public GameObject[] toSpawn;
 
     private GameObject player1;
     private GameObject player2;
@@ -69,6 +71,17 @@ public class LevelChanger : NetworkBehaviour
             player2.GetComponent<SpriteRenderer>().sortingLayerName = sortingLayerName;
             player2.SetActive(true); // Reactivate player2
             player2.transform.position = position;
+        }
+
+        if (IsServer) {
+            foreach (GameObject obj in toSpawn)
+            {
+                NetworkObject netObj = obj.GetComponent<NetworkObject>();
+                if (netObj != null && !netObj.IsSpawned) 
+                {
+                    netObj.Spawn();
+                }
+            }
         }
     }
 }

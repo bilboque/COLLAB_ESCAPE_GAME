@@ -26851,6 +26851,17 @@ PrefabInstance:
       propertyPath: InScenePlacedSourceGlobalObjectIdHash
       value: 506165564
       objectReference: {fileID: 0}
+    - target: {fileID: 9176372121077638057, guid: b34bfa5ef2ea1829cb9ec9bf3b757130,
+        type: 3}
+      propertyPath: toSpawn.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9176372121077638057, guid: b34bfa5ef2ea1829cb9ec9bf3b757130,
+        type: 3}
+      propertyPath: toSpawn.Array.data[0]
+      value: 
+      objectReference: {fileID: 8358032801273286569, guid: b0338760e612f4969a2d17de2ab40fa6,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
