@@ -17,7 +17,8 @@ public class LevelChanger : NetworkBehaviour
     private NetworkVariable<bool> player1Ready = new NetworkVariable<bool>(false);
     private NetworkVariable<bool> player2Ready = new NetworkVariable<bool>(false);
 
-    void OnTriggerEnter2D(Collider2D other)
+    [ServerRpc]
+    void OnTriggerEnter2DServerRpc(Collider2D other)
     {
         Debug.Log("trigger");
         if (other.CompareTag("Player") && player1==null)
@@ -36,11 +37,12 @@ public class LevelChanger : NetworkBehaviour
         }
         if (player1Ready.Value && player2Ready.Value) {
             Debug.Log("ready");
-            ChangeScene();
+            ChangeSceneServerRpc();
         }
     }
 
-    void ChangeScene()
+    [ServerRpc]
+    void ChangeSceneServerRpc()
     {
         Debug.Log("change scene");
         SceneManager.sceneLoaded += OnSceneLoaded;
