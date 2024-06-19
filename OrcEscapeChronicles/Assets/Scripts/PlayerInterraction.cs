@@ -24,7 +24,7 @@ public class PlayerInteraction : MonoBehaviour
     {
         if (other.CompareTag("Interactable"))
         {
-            if (currentInteractable != null && other.GetComponent<Interactable>() == currentInteractable)
+            if (currentInteractable != null)
             {
                 currentInteractable = null;
             }
