@@ -47,6 +47,7 @@ public class LevelChanger : NetworkBehaviour
         {
             obj.Despawn(true);
         }
+        Task.Delay(100);
         SceneManager.sceneLoaded += OnSceneLoaded;
         SceneManager.LoadScene(level + 1);
     }
