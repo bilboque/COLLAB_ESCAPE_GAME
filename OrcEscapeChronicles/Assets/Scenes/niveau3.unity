@@ -6836,9 +6836,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfc8cb2d3b1820c58b5722a61bb838f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bridge: {fileID: 170711526}
-  bridgeWalls: {fileID: 1198651732}
-  openBridge: {fileID: 2071816197}
+  bridge: {fileID: 1682337995}
+  bridgeWalls: {fileID: 135467110}
+  openBridge: {fileID: 1777462463}
   glow: {fileID: 626936223}
 --- !u!61 &1180305362
 BoxCollider2D:

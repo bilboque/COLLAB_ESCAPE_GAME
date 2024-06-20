@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Threading.Tasks;
 using System;
-
 public class LevelChanger : NetworkBehaviour
 {
     public string level;
@@ -39,8 +38,9 @@ public class LevelChanger : NetworkBehaviour
         }
     }
 
-    void ChangeScene()
+    async void ChangeScene()
     {
+        await Task.Delay(100);
         if (NetworkManager.Singleton.IsServer)
         {
             NetworkManager.SceneManager.LoadScene(level, LoadSceneMode.Single);
