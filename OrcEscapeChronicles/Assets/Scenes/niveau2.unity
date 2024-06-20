@@ -208,6 +208,7 @@ GameObject:
   - component: {fileID: 154970419}
   - component: {fileID: 154970420}
   - component: {fileID: 154970421}
+  - component: {fileID: 154970422}
   m_Layer: 20
   m_Name: trigger
   m_TagString: Untagged
@@ -291,6 +292,19 @@ MonoBehaviour:
   bridgeWalls: {fileID: 908297214}
   openBridge: {fileID: 730387402}
   glow: {fileID: 2043580100}
+--- !u!114 &154970422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154970418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c5dd572e8c98e7549c0773b0d27d1d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  difficultyManager: {fileID: 1205750641}
 --- !u!1001 &173184285
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1093,10 +1107,15 @@ PrefabInstance:
       propertyPath: level
       value: niveau2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9176282259466268649, guid: a9f076b554cacba9d92a5eaf7a01c8f7, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4142700223955956089, guid: a9f076b554cacba9d92a5eaf7a01c8f7,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 742550277}
   m_SourcePrefab: {fileID: 100100000, guid: a9f076b554cacba9d92a5eaf7a01c8f7, type: 3}
 --- !u!1 &742550275 stripped
 GameObject:
@@ -1104,6 +1123,30 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 742550274}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &742550276 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4142700223955956089, guid: a9f076b554cacba9d92a5eaf7a01c8f7,
+    type: 3}
+  m_PrefabInstance: {fileID: 742550274}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &742550277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742550276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caf6bfdb578885af3a59af3fbad111c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: niveau3
+  levelTooGood: niveau3
+  sortingLayerName: Layer 2
+  difficultyManager: {fileID: 1205750641}
+  position: {x: -9, y: -4}
+  positionLevelTooGood: {x: -9, y: -4}
 --- !u!1 &755321583
 GameObject:
   m_ObjectHideFlags: 0
@@ -1356,6 +1399,7 @@ GameObject:
   - component: {fileID: 854190965}
   - component: {fileID: 854190967}
   - component: {fileID: 854190966}
+  - component: {fileID: 854190968}
   m_Layer: 20
   m_Name: trigger
   m_TagString: Untagged
@@ -1439,6 +1483,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &854190968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854190964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c5dd572e8c98e7549c0773b0d27d1d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  difficultyManager: {fileID: 1205750641}
 --- !u!1 &908297214
 GameObject:
   m_ObjectHideFlags: 0
@@ -4093,6 +4150,55 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1157138968}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1205750639
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1205750640}
+  - component: {fileID: 1205750641}
+  m_Layer: 0
+  m_Name: DifficultyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1205750640
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205750639}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.2198982, y: 2.502738, z: -0.019995034}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1205750641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205750639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfbf910f281262228b661a44dbae9db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  optimalSolution: 3
+  trysToHelpPlayer: 10
+  counter: 0
+  doorOpen: {fileID: 742550275}
+  doorClosed: {fileID: 1042607001}
 --- !u!1001 &1214710406
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5300,6 +5406,7 @@ GameObject:
   - component: {fileID: 1278103615}
   - component: {fileID: 1278103617}
   - component: {fileID: 1278103616}
+  - component: {fileID: 1278103618}
   m_Layer: 20
   m_Name: trigger
   m_TagString: Untagged
@@ -5383,6 +5490,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1278103618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278103614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c5dd572e8c98e7549c0773b0d27d1d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  difficultyManager: {fileID: 1205750641}
 --- !u!1 &1313554736
 GameObject:
   m_ObjectHideFlags: 0
@@ -9309,3 +9429,4 @@ SceneRoots:
   - {fileID: 1928026486}
   - {fileID: 742550274}
   - {fileID: 1042607000}
+  - {fileID: 1205750640}

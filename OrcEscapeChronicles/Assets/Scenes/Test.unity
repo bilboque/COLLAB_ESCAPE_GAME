@@ -5585,7 +5585,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 778133949}
-  m_Father: {fileID: 1177272032}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &300235084
 PrefabInstance:
@@ -18828,7 +18828,6 @@ Transform:
   - {fileID: 877014550}
   - {fileID: 137166001}
   - {fileID: 226418607}
-  - {fileID: 299749051}
   - {fileID: 1520101336}
   - {fileID: 139386525}
   - {fileID: 1286777985}
@@ -28505,7 +28504,7 @@ MonoBehaviour:
   plate1: {fileID: 717919143}
   plate2: {fileID: 2022529894}
   doorClosed: {fileID: 299749050}
-  doorOpened: {fileID: 0}
+  doorOpened: {fileID: 2073197993}
 --- !u!4 &1572269472
 Transform:
   m_ObjectHideFlags: 0
@@ -33724,6 +33723,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9f076b554cacba9d92a5eaf7a01c8f7, type: 3}
+--- !u!1 &2073197993 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6319519915102019498, guid: a9f076b554cacba9d92a5eaf7a01c8f7,
+    type: 3}
+  m_PrefabInstance: {fileID: 2073197992}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2077392834
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36789,4 +36794,5 @@ SceneRoots:
   m_Roots:
   - {fileID: 1622312051}
   - {fileID: 1572269472}
+  - {fileID: 299749051}
   - {fileID: 2073197992}
