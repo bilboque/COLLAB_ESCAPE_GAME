@@ -1695,7 +1695,7 @@ MonoBehaviour:
   bridge: {fileID: 432324224}
   bridgeWalls: {fileID: 418601813}
   openBridge: {fileID: 2038345313}
-  glow: {fileID: 0}
+  glow: {fileID: 1490252368}
   TP: {fileID: 1480402068}
 --- !u!1 &418601813
 GameObject:
