@@ -5929,7 +5929,7 @@ MonoBehaviour:
   bridgeWalls: {fileID: 1353898939}
   openBridge: {fileID: 420524814}
   glow: {fileID: 1746127464}
-  TP: {fileID: 0}
+  TP: {fileID: 378184322}
 --- !u!61 &1278103617
 BoxCollider2D:
   m_ObjectHideFlags: 0
