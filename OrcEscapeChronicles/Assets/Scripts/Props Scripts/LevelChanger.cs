@@ -40,9 +40,9 @@ public class LevelChanger : NetworkBehaviour
 
     async void ChangeScene()
     {
-        await Task.Delay(100);
         if (NetworkManager.Singleton.IsServer)
         {
+            await Task.Delay(100);
             NetworkManager.SceneManager.LoadScene(level, LoadSceneMode.Single);
         }
     }
