@@ -243,13 +243,13 @@ GameObject:
   - component: {fileID: 125399297}
   - component: {fileID: 125399299}
   - component: {fileID: 125399298}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Bridge1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &125399297
 Transform:
   m_ObjectHideFlags: 0
@@ -450,13 +450,13 @@ GameObject:
   - component: {fileID: 135467114}
   - component: {fileID: 135467113}
   - component: {fileID: 135467112}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: BWalls7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &135467111
 Transform:
   m_ObjectHideFlags: 0
@@ -885,13 +885,13 @@ GameObject:
   - component: {fileID: 170711527}
   - component: {fileID: 170711529}
   - component: {fileID: 170711528}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Bridge6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &170711527
 Transform:
   m_ObjectHideFlags: 0
@@ -1381,13 +1381,13 @@ GameObject:
   - component: {fileID: 418601817}
   - component: {fileID: 418601816}
   - component: {fileID: 418601815}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: BWalls3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &418601814
 Transform:
   m_ObjectHideFlags: 0
@@ -1705,13 +1705,13 @@ GameObject:
   - component: {fileID: 432324225}
   - component: {fileID: 432324227}
   - component: {fileID: 432324226}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Bridge3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &432324225
 Transform:
   m_ObjectHideFlags: 0
@@ -1921,13 +1921,13 @@ GameObject:
   - component: {fileID: 472819778}
   - component: {fileID: 472819780}
   - component: {fileID: 472819779}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: lock5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &472819778
 Transform:
   m_ObjectHideFlags: 0
@@ -2024,12 +2024,12 @@ Tilemap:
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 590e2b09452a4594994d97cbc5d5a3e3, type: 2}
+    m_Data: {fileID: 11400000, guid: ffa3466f9c9d64241a5dfed873df45ce, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 5a817684b3d859244a3e2126a2cb1589, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 1
-    m_Data: {fileID: 21300096, guid: 9f8f114589864b6489859a58fbb6baf9, type: 3}
+    m_Data: {fileID: 21300016, guid: 9f8f114589864b6489859a58fbb6baf9, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300090, guid: 9f8f114589864b6489859a58fbb6baf9, type: 3}
   m_TileMatrixArray:
@@ -2089,13 +2089,13 @@ GameObject:
   - component: {fileID: 506220268}
   - component: {fileID: 506220270}
   - component: {fileID: 506220269}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Bridge5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &506220268
 Transform:
   m_ObjectHideFlags: 0
@@ -2305,13 +2305,13 @@ GameObject:
   - component: {fileID: 512006787}
   - component: {fileID: 512006789}
   - component: {fileID: 512006788}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: lock2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &512006787
 Transform:
   m_ObjectHideFlags: 0
@@ -2321,7 +2321,7 @@ Transform:
   m_GameObject: {fileID: 512006786}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.45, y: 0.78, z: 0}
+  m_LocalPosition: {x: -0.44, y: 0.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2474,13 +2474,13 @@ GameObject:
   - component: {fileID: 543080119}
   - component: {fileID: 543080118}
   - component: {fileID: 543080117}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: BWalls1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &543080116
 Transform:
   m_ObjectHideFlags: 0
@@ -2898,13 +2898,13 @@ GameObject:
   - component: {fileID: 647560846}
   - component: {fileID: 647560848}
   - component: {fileID: 647560847}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Bridge4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &647560846
 Transform:
   m_ObjectHideFlags: 0
@@ -3439,13 +3439,13 @@ GameObject:
   - component: {fileID: 874699577}
   - component: {fileID: 874699579}
   - component: {fileID: 874699578}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: lock4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &874699577
 Transform:
   m_ObjectHideFlags: 0
@@ -6880,13 +6880,13 @@ GameObject:
   - component: {fileID: 1198651736}
   - component: {fileID: 1198651735}
   - component: {fileID: 1198651734}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: BWalls6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1198651733
 Transform:
   m_ObjectHideFlags: 0
@@ -7269,13 +7269,13 @@ GameObject:
   - component: {fileID: 1354573526}
   - component: {fileID: 1354573528}
   - component: {fileID: 1354573527}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: lock1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1354573526
 Transform:
   m_ObjectHideFlags: 0
@@ -7285,7 +7285,7 @@ Transform:
   m_GameObject: {fileID: 1354573525}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.15, y: 0.78, z: 0}
+  m_LocalPosition: {x: -0.19, y: 0.83, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7690,13 +7690,13 @@ GameObject:
   - component: {fileID: 1664431459}
   - component: {fileID: 1664431458}
   - component: {fileID: 1664431457}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: BWalls4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1664431456
 Transform:
   m_ObjectHideFlags: 0
@@ -8014,13 +8014,13 @@ GameObject:
   - component: {fileID: 1682337996}
   - component: {fileID: 1682337998}
   - component: {fileID: 1682337997}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Bridge7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1682337996
 Transform:
   m_ObjectHideFlags: 0
@@ -8230,13 +8230,13 @@ GameObject:
   - component: {fileID: 1694074541}
   - component: {fileID: 1694074543}
   - component: {fileID: 1694074542}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Bridge2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1694074541
 Transform:
   m_ObjectHideFlags: 0
@@ -8426,13 +8426,13 @@ GameObject:
   - component: {fileID: 1777462464}
   - component: {fileID: 1777462466}
   - component: {fileID: 1777462465}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: lock7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1777462464
 Transform:
   m_ObjectHideFlags: 0
@@ -8442,7 +8442,7 @@ Transform:
   m_GameObject: {fileID: 1777462463}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.45, y: 0.78, z: 0}
+  m_LocalPosition: {x: -0.42, y: 0.74, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8669,13 +8669,13 @@ GameObject:
   - component: {fileID: 1913361249}
   - component: {fileID: 1913361248}
   - component: {fileID: 1913361247}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: BWalls2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1913361246
 Transform:
   m_ObjectHideFlags: 0
@@ -9262,13 +9262,13 @@ GameObject:
   - component: {fileID: 2038345314}
   - component: {fileID: 2038345316}
   - component: {fileID: 2038345315}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: lock3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2038345314
 Transform:
   m_ObjectHideFlags: 0
@@ -9278,7 +9278,7 @@ Transform:
   m_GameObject: {fileID: 2038345313}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.45, y: 0.78, z: 0}
+  m_LocalPosition: {x: -0.42, y: 0.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9465,13 +9465,13 @@ GameObject:
   - component: {fileID: 2071816198}
   - component: {fileID: 2071816200}
   - component: {fileID: 2071816199}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: lock6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2071816198
 Transform:
   m_ObjectHideFlags: 0
@@ -9481,7 +9481,7 @@ Transform:
   m_GameObject: {fileID: 2071816197}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.45, y: 0.78, z: 0}
+  m_LocalPosition: {x: -0.45, y: 0.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12008,13 +12008,13 @@ GameObject:
   - component: {fileID: 2133632501}
   - component: {fileID: 2133632500}
   - component: {fileID: 2133632499}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: BWalls5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2133632498
 Transform:
   m_ObjectHideFlags: 0

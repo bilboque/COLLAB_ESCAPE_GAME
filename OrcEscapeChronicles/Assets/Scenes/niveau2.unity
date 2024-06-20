@@ -1143,7 +1143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: niveau3
   levelTooGood: niveau3
-  sortingLayerName: Layer 2
+  sortingLayerName: Layer 1
   difficultyManager: {fileID: 1205750641}
   position: {x: -9, y: -4}
   positionLevelTooGood: {x: -9, y: -4}
