@@ -3620,12 +3620,12 @@ PrefabInstance:
     - target: {fileID: 2055102311959635375, guid: 413081fc53a78a043b38591243616398,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.4
+      value: -9.13
       objectReference: {fileID: 0}
     - target: {fileID: 2055102311959635375, guid: 413081fc53a78a043b38591243616398,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.67
+      value: 5.57
       objectReference: {fileID: 0}
     - target: {fileID: 2055102311959635375, guid: 413081fc53a78a043b38591243616398,
         type: 3}
@@ -8817,7 +8817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 003c500e00e0a13b8983c9d3beba6f01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  position: {x: -8, y: 5}
+  position: {x: 7.69, y: -2.5}
 --- !u!483693784 &1598249542
 TilemapRenderer:
   m_ObjectHideFlags: 0
