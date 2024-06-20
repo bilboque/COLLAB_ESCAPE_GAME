@@ -21,6 +21,7 @@ public class LevelChanger : NetworkBehaviour
         Debug.Log("trigger");
         if (other.CompareTag("Player") && player1==null)
         {
+            SceneManager.sceneLoaded += OnSceneLoaded;
             Debug.Log("player 1");
             player1 = other.gameObject;
             player1Ready = true;
@@ -34,7 +35,6 @@ public class LevelChanger : NetworkBehaviour
         }
         if (player1Ready && player2Ready) {
             Debug.Log("ready");
-            SceneManager.sceneLoaded += OnSceneLoaded;
             ChangeScene();
         }
     }
