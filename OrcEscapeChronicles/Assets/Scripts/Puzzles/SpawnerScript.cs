@@ -3,7 +3,7 @@ using Unity.Netcode;
 
 public class ServerObjectSpawner : MonoBehaviour
 {
-    public GameObject objectPrefab; // Reference to your networked object prefab
+    public GameObject objectPrefab; 
     public Transform spawnPosition;
 
     void Start()
